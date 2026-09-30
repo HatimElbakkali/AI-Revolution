@@ -1,1 +1,198 @@
-@import "tailwindcss"
+/* ================================
+   Imports & Theme
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+  --color-dark: #1e293b;
+  --color-light: #f8fafc;
+
+  --font-sans: Inter, sans-serif;
+}
+
+/* ================================
+   Base Styles
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-dark font-sans antialiased;
+  }
+
+  .app-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* ================================
+   Components
+================================ */
+@layer components {
+  /* ---------- Buttons ---------- */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium text-center transition shadow-lg hover:shadow-primary/30;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gray-300 hover:border-primary text-gray-700 hover:text-primary px-6 py-3 rounded-lg font-medium text-center transition;
+  }
+
+  /* ---------- Cards ---------- */
+  .ai-type-card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .ai-type-card-image {
+    @apply h-48 w-full bg-gradient-to-r flex items-center justify-center;
+  }
+
+  .ai-type-card-icon {
+    @apply w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3;
+  }
+
+  .ai-type-card-tag {
+    @apply inline-block px-3 py-1 text-xs font-semibold rounded-full;
+  }
+
+  /* Benefit cards */
+  .benefit-card {
+    @apply bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-primary/30 transition-all;
+  }
+
+  .benefit-card-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center mb-4;
+  }
+
+  /* ---------- Forms ---------- */
+  .form-input {
+    @apply mt-1 block w-full rounded-md bg-white border-gray-300 shadow-sm focus:border-primary focus:outline-none focus:border-2 p-3 border;
+  }
+
+  .form-input-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-primary/10 text-primary;
+  }
+
+  /* ---------- Navigation ---------- */
+  .nav-item {
+    @apply text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium;
+  }
+
+  .nav-btn {
+    @apply bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition;
+  }
+
+  .mobile-nav-item {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-primary hover:bg-gray-50;
+  }
+
+  .mobile-nav-btn {
+    @apply block w-full text-center bg-primary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-primary/90 transition mt-2;
+  }
+
+  /* ---------- Sections ---------- */
+  .section-header {
+    @apply text-3xl md:text-4xl font-bold mt-2;
+  }
+
+  .section-subheader {
+    @apply text-primary font-semibold;
+  }
+
+  .section-description {
+    @apply mt-4 max-w-2xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* ---------- Avatars ---------- */
+  .avatar {
+    @apply inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover;
+  }
+
+  /* ---------- Contact Section ---------- */
+  .contact-title {
+    @apply text-lg font-medium text-gray-900;
+  }
+
+  .contact-text {
+    @apply mt-1 text-gray-600;
+  }
+
+  .contact-info-group {
+    @apply flex items-start space-x-4;
+  }
+
+  .contact-info-list {
+    @apply mt-8 space-y-4;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    @apply bg-gradient-to-b from-dark to-gray-900 text-white pt-16 pb-8;
+  }
+
+  .footer-description {
+    @apply text-gray-400 leading-relaxed;
+  }
+
+  .footer-social-link {
+    @apply text-gray-400 hover:text-white transition hover:-translate-y-1;
+  }
+
+  .footer-title {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .footer-link-list {
+    @apply mt-6 space-y-3;
+  }
+
+  .footer-link {
+    @apply text-gray-400 hover:text-primary transition flex items-center;
+  }
+
+  .footer-newsletter-input {
+    @apply px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .footer-newsletter-btn {
+    @apply bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg font-medium transition whitespace-nowrap;
+  }
+
+  .footer-newsletter-desc {
+    @apply mt-6 text-gray-400;
+  }
+
+  .footer-newsletter-privacy {
+    @apply mt-2 text-xs text-gray-500;
+  }
+
+  .footer-bottom-bar {
+    @apply border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center;
+  }
+
+  .footer-bottom-text {
+    @apply text-gray-500 text-sm;
+  }
+
+  .footer-bottom-link-group {
+    @apply flex space-x-6 mt-4 md:mt-0;
+  }
+
+  .footer-bottom-link {
+    @apply text-gray-500 hover:text-gray-300 text-sm;
+  }
+}
