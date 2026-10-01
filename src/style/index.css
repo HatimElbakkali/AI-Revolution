@@ -144,7 +144,7 @@ html {
   }
 
   .footer-description {
-    @apply text-gray-400 leading-relaxed;
+    @apply text-gray-400 leading-relaxed ;
   }
 
   .footer-social-link {
