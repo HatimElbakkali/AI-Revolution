@@ -29,6 +29,32 @@
 
 ---
 
+## 📁 Project Structure
+
+```
+AI-Revolution/
+├── src/
+│   ├── components/
+│   │   ├── AiBenefits.jsx
+│   │   ├── AiTypes.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   └── Navbar.jsx
+│   ├── pages/
+│   │   └── Home.jsx
+│   ├── style/
+│   │   └── index.css
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
@@ -61,32 +87,6 @@ Then open **http://localhost:5173/AI-Revolution/** in your browser.
 | `npm run build` | Build the app for production |
 | `npm run preview` | Preview the production build |
 | `npm run lint` | Run ESLint |
-
----
-
-## 📁 Project Structure
-
-```
-AI-Revolution/
-├── src/
-│   ├── components/
-│   │   ├── AiBenefits.jsx
-│   │   ├── AiTypes.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   └── Navbar.jsx
-│   ├── pages/
-│   │   └── Home.jsx
-│   ├── style/
-│   │   └── index.css
-│   ├── App.jsx
-│   └── main.jsx
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
 
 ---
 
